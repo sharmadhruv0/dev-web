@@ -21,7 +21,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[0.08] bg-[#0A0D14] pt-16 pb-12 px-6 sm:px-8 text-center relative z-20">
+    <footer className="border-t border-white/[0.08] bg-[#070A0F]/60 backdrop-blur-sm pt-16 pb-12 px-6 sm:px-8 text-center relative z-20">
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Centered Pull Quote */}

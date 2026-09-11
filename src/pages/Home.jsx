@@ -38,9 +38,9 @@ export default function Home() {
             alt="Open book in a quiet study"
             className="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-[0.22] scale-105"
           />
-          {/* Heavy dark navy overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0D14]/90 via-[#0A0D14]/85 to-[#0A0D14]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#0A0D14_75%)]" />
+          {/* Ambient overlay gradient that allows low-faded background colors to breathe through */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#070A0F]/80 via-[#070A0F]/70 to-[#070A0F]/85" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#070A0F_80%)]" />
         </div>
 
         <motion.div
@@ -87,7 +87,7 @@ export default function Home() {
       </section>
 
       {/* 2. ABOUT PREVIEW SECTION */}
-      <section className="py-24 sm:py-32 px-6 sm:px-8 border-t border-white/[0.06] bg-[#0A0D14]">
+      <section className="py-24 sm:py-32 px-6 sm:px-8 border-t border-white/[0.06] bg-[#070A0F]/30 backdrop-blur-[1px]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -173,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* 4. JOURNAL PREVIEW SECTION (Centered, text-only) */}
-      <section className="py-24 sm:py-32 px-6 sm:px-8 border-t border-white/[0.06] bg-[#0A0D14] text-center">
+      <section className="py-24 sm:py-32 px-6 sm:px-8 border-t border-white/[0.06] bg-[#070A0F]/30 backdrop-blur-[1px] text-center">
         <motion.div
           className="max-w-3xl mx-auto space-y-6"
           {...fadeInUp}
@@ -197,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* 5. NEWSLETTER SECTION */}
-      <section id="newsletter" className="py-24 sm:py-32 px-6 sm:px-8 border-t border-white/[0.06] bg-[#10141C]">
+      <section id="newsletter" className="py-24 sm:py-32 px-6 sm:px-8 border-t border-white/[0.06] bg-[#10141C]/60 backdrop-blur-sm">
         <motion.div
           className="max-w-xl mx-auto text-center space-y-6"
           {...fadeInUp}

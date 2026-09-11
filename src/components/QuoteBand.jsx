@@ -3,7 +3,7 @@ import Divider from './Divider';
 
 export default function QuoteBand({ className = '' }) {
   return (
-    <section className={`py-20 sm:py-28 px-4 sm:px-6 relative overflow-hidden bg-[#0A0D14] border-t border-b border-white/[0.06] ${className}`}>
+    <section className={`py-20 sm:py-28 px-4 sm:px-6 relative overflow-hidden bg-[#070A0F]/40 backdrop-blur-[2px] border-t border-b border-white/[0.06] ${className}`}>
       {/* Subtle radial ambient warm glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent pointer-events-none" />
 

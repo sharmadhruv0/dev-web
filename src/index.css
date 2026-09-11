@@ -49,3 +49,66 @@
 .editorial-glow {
   background: radial-gradient(circle at 50% 20%, rgba(212, 169, 79, 0.05) 0%, transparent 60%);
 }
+
+/* Ultra-slow, low-faded moving background color animations */
+@keyframes float-slow-1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(6vw, 8vh, 0) scale(1.12);
+  }
+  66% {
+    transform: translate3d(-5vw, 4vh, 0) scale(0.92);
+  }
+}
+
+@keyframes float-slow-2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  38% {
+    transform: translate3d(-8vw, -6vh, 0) scale(1.15);
+  }
+  72% {
+    transform: translate3d(5vw, -3vh, 0) scale(0.95);
+  }
+}
+
+@keyframes float-slow-3 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1.05);
+  }
+  32% {
+    transform: translate3d(5vw, -8vh, 0) scale(0.9);
+  }
+  68% {
+    transform: translate3d(-6vw, 7vh, 0) scale(1.1);
+  }
+}
+
+@keyframes float-slow-4 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(0.96);
+  }
+  50% {
+    transform: translate3d(-6vw, -9vh, 0) scale(1.16);
+  }
+}
+
+.animate-float-1 {
+  animation: float-slow-1 32s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-slow-2 42s ease-in-out infinite;
+}
+
+.animate-float-3 {
+  animation: float-slow-3 36s ease-in-out infinite;
+}
+
+.animate-float-4 {
+  animation: float-slow-4 46s ease-in-out infinite;
+}
+
