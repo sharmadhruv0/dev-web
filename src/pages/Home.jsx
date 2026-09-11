@@ -31,17 +31,8 @@ export default function Home() {
       
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center px-6 sm:px-8 py-20 overflow-hidden">
-        {/* Faint, darkened background image with heavy dark overlay */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=2000&q=80"
-            alt="Open book in a quiet study"
-            className="w-full h-full object-cover object-center filter grayscale contrast-125 brightness-[0.22] scale-105"
-          />
-          {/* Ambient overlay gradient that allows low-faded background colors to breathe through */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#070A0F]/80 via-[#070A0F]/70 to-[#070A0F]/85" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#070A0F_80%)]" />
-        </div>
+        {/* Faint subtle radial focus, fully transparent to let moving ambient colors float behind */}
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_45%,#080c14/40_100%)] pointer-events-none" />
 
         <motion.div
           className="max-w-4xl mx-auto text-center space-y-8 relative z-10"
