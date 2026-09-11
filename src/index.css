@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0A0D14;
+    color: #F1EEE6;
+    font-family: 'EB Garamond', Lora, Georgia, serif;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #F1EEE6;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom literary drop-cap styling */
+.drop-cap::first-letter {
+  float: left;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4.2rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  color: #D4A94F;
+  font-weight: 600;
+}
+
+/* Custom slim scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0D14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2533;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4A94F;
+}
+
+/* Subtle background vignette/ambient glow */
+.editorial-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(212, 169, 79, 0.05) 0%, transparent 60%);
+}
