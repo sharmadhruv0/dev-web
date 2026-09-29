@@ -16,9 +16,7 @@ export default function Books() {
   };
 
   const purchaseLinks = [
-    { name: 'AMAZON', url: 'https://amazon.com' },
-    { name: 'BARNES & NOBLE', url: 'https://barnesandnoble.com' },
-    { name: 'GOODREADS', url: 'https://goodreads.com' },
+    { name: 'ORDER ON AMAZON', url: 'https://amzn.in/d/0han8EuY' },
   ];
 
   return (
@@ -76,7 +74,7 @@ export default function Books() {
               A debut collection of poems tracing the arc of a single inner day — from the first restless dawn of desire, through the long noon of doubt, to the amber hush of acceptance. Written across four years and three cities, Along the Moving Sun is a book for the ones who feel the world in slow tides.
             </p>
 
-            {/* Row of three outlined pill/tab buttons */}
+            {/* Purchase Link */}
             <div className="pt-4 flex flex-wrap items-center gap-3 sm:gap-4">
               {purchaseLinks.map((item) => (
                 <a
@@ -84,10 +82,10 @@ export default function Books() {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold/40 hover:border-gold text-[#F1EEE6] hover:text-gold bg-transparent font-sans text-xs tracking-wider uppercase transition-all duration-300 hover:bg-gold/5"
+                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-gold/60 hover:border-gold text-gold hover:text-[#0A0D14] bg-gold/10 hover:bg-gold font-sans text-xs font-semibold tracking-widest uppercase transition-all duration-300 shadow-md shadow-black/40 hover:shadow-[0_0_20px_rgba(212,169,79,0.35)]"
                 >
                   <span>{item.name}</span>
-                  <ExternalLink className="w-3 h-3 text-gold/70" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               ))}
             </div>

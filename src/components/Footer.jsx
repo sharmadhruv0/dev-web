@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Twitter, Youtube, BookOpen } from 'lucide-react';
+import { Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 import Divider from './Divider';
 
 const FOOTER_LINKS = [
@@ -16,7 +16,6 @@ const SOCIAL_LINKS = [
   { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
   { name: 'YouTube', icon: Youtube, href: 'https://youtube.com' },
-  { name: 'Goodreads', icon: BookOpen, href: 'https://goodreads.com' },
 ];
 
 export default function Footer() {

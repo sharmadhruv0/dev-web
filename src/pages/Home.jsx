@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Feather, Mail, ArrowRight, Check } from 'lucide-react';
+import { BookOpen, Feather, Mail, ArrowRight, Check, ExternalLink } from 'lucide-react';
 import Eyebrow from '../components/Eyebrow';
 import Divider from '../components/Divider';
 import Button from '../components/Button';
@@ -152,10 +152,19 @@ export default function Home() {
                 A debut collection of poems tracing the arc of a single inner day — from the first restless dawn of desire, through the long noon of doubt, to the amber hush of acceptance. Written across four years and three cities, <em className="text-[#F1EEE6]">Along the Moving Sun</em> is a book for the ones who feel the world in slow tides.
               </p>
 
-              <div className="pt-4">
+              <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Button to="/books" variant="gold">
                   VIEW THE BOOK
                 </Button>
+                <a
+                  href="https://amzn.in/d/0han8EuY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold/40 hover:border-gold text-[#F1EEE6] hover:text-gold bg-transparent font-sans text-xs tracking-wider uppercase transition-all duration-300 hover:bg-gold/5"
+                >
+                  <span>ORDER ON AMAZON</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-gold/80" />
+                </a>
               </div>
             </motion.div>
 
