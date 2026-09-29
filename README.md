@@ -84,7 +84,7 @@ npm run preview
 
 ## ✍️ Customization Notes
 
-- **Social Links:** Update URLs in `src/components/Footer.jsx` and `src/pages/Home.jsx`.
+- **Social Links:** Managed centrally in `src/data/socialLinks.js` (X, YouTube, LinkedIn, Snapchat).
 - **Journal Posts:** Add new essays to `src/data/journalData.js`.
 - **Author Portrait:** Replace the image URL in `src/components/PortraitCard.jsx` with a custom high-resolution photo.
 - **Book Link:** Change Amazon purchase link in `src/pages/Books.jsx`.

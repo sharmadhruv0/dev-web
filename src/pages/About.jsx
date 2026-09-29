@@ -4,6 +4,8 @@ import Eyebrow from '../components/Eyebrow';
 import Divider from '../components/Divider';
 import PortraitCard from '../components/PortraitCard';
 import QuoteBand from '../components/QuoteBand';
+import { SOCIAL_LINKS } from '../data/socialLinks';
+import { getSocialIcon } from '../components/SocialIcons';
 
 const GUIDING_IDEAS = [
   {
@@ -84,6 +86,25 @@ export default function About() {
           <p>
             He writes weekly essays on <em className="italic text-[#F1EEE6] font-serif">philosophy, creativity, business, and the small architectures of love</em>. He is currently at work on his second book — a collection of essays on the slow arts.
           </p>
+
+          {/* Social connect links */}
+          <div className="pt-6 border-t border-white/[0.08] flex flex-wrap items-center justify-center gap-3">
+            <span className="font-sans text-[11px] uppercase tracking-widest text-[#7A7670] w-full text-center mb-1">
+              CONNECT WITH DEVANSH
+            </span>
+            {SOCIAL_LINKS.map((item) => (
+              <a
+                key={item.name}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-gold/60 text-[#B8B4AC] hover:text-gold bg-[#10141C]/60 hover:bg-gold/5 transition-all duration-300 font-sans text-xs tracking-wider"
+              >
+                {getSocialIcon(item.name, { className: 'w-3.5 h-3.5' })}
+                <span>{item.name}</span>
+              </a>
+            ))}
+          </div>
         </motion.div>
       </section>
 

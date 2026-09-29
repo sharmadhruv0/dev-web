@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 import Divider from './Divider';
+import { SOCIAL_LINKS } from '../data/socialLinks';
+import { getSocialIcon } from './SocialIcons';
 
 const FOOTER_LINKS = [
   { name: 'ABOUT', path: '/about' },
@@ -9,13 +10,6 @@ const FOOTER_LINKS = [
   { name: 'JOURNAL', path: '/journal' },
   { name: 'NEWSLETTER', path: '/#newsletter' },
   { name: 'CONTACT', path: '/contact' },
-];
-
-const SOCIAL_LINKS = [
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
-  { name: 'YouTube', icon: Youtube, href: 'https://youtube.com' },
 ];
 
 export default function Footer() {
@@ -35,23 +29,21 @@ export default function Footer() {
 
         <Divider centered gold className="opacity-40 my-6" />
 
-        {/* Social Icons (Circular Outline Icons) */}
-        <div className="flex items-center justify-center gap-4">
-          {SOCIAL_LINKS.map((social) => {
-            const Icon = social.icon;
-            return (
-              <a
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.name}
-                className="w-10 h-10 rounded-full border border-white/10 hover:border-gold flex items-center justify-center text-[#B8B4AC] hover:text-gold transition-all duration-300 hover:scale-110 hover:bg-gold/5"
-              >
-                <Icon className="w-4 h-4" />
-              </a>
-            );
-          })}
+        {/* Social Links with App Icons and Platform Names */}
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          {SOCIAL_LINKS.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.appLabel}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-gold/60 text-[#B8B4AC] hover:text-gold bg-[#10141C]/60 hover:bg-gold/5 transition-all duration-300 font-sans text-xs tracking-wider"
+            >
+              {getSocialIcon(social.name, { className: 'w-3.5 h-3.5' })}
+              <span>{social.name}</span>
+            </a>
+          ))}
         </div>
 
         {/* Footer Nav Links */}
